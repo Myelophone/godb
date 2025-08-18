@@ -5,6 +5,13 @@
 Icon
 ._*
 
+# artillery reports
+report.html
+report.json
+
+# generated ts files
+*.gen.ts
+
 # Node.js
 node_modules/
 npm-debug.log
@@ -12,6 +19,7 @@ yarn-error.log
 .pnp.*
 .pnpm-debug.log*
 npm-error.log
+.npmrc
 
 # Typescript
 *.tsbuildinfo
@@ -21,7 +29,6 @@ npm-error.log
 *.map
 
 # React
-build/
 dist/
 web-build/
 
@@ -36,6 +43,7 @@ web-build/
 
 # Vite
 .vite/
+stats.html
 
 # Golang
 *.exe
@@ -56,9 +64,6 @@ vendor/
 
 # PHP
 /vendor/
-
-# Composer
-composer.lock
 
 # SASS/SCSS
 .sass-cache/
@@ -137,7 +142,6 @@ gradlew.bat
 *.launch
 
 # VS Code
-.vscode/
 .history/
 *.code-workspace
 
@@ -206,18 +210,21 @@ lerna-debug.log*
 .env.*
 !.env.example
 
-# Nuxt.js
+# Nuxt dev/build outputs
+.output
+.data
 .nuxt
+.nitro
+.cache
+dist
 
 # Gatsby files
 .cache/
-public/
 
 # Vuepress
 .vuepress/dist
 
 # Vue
-/dist
 /coverage
 
 # Static site generators
@@ -274,7 +281,6 @@ xcuserdata
 /captures/
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
 
@@ -287,6 +293,7 @@ Thumbs.db
 # Backups
 *.bak
 *.backup
+backups
 
 # Compiled files
 *.out
@@ -303,7 +310,6 @@ coverage
 error_reporting/
 
 # Ignore TypeScript build output
-lib
 tmp
 temp
 build
@@ -336,7 +342,6 @@ logs/
 *.rar
 *.7z
 *.bz2
-*.sql
 
 # Others
 *$py.class
@@ -478,6 +483,10 @@ $RECYCLE.BIN/
 *.lock
 *.seed.lock
 
+# for ensuring version safety
+!yarn.lock
+!composer.lock
+
 # OS-specific caches
 .vite_opt_cache
 pnpm-global
@@ -492,3 +501,11 @@ tmp/
 cache/
 
 install-state.gz
+
+# settings file for project
+myelophone.js
+
+.million
+
+test-results
+playwright-report
